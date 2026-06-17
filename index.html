@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Segurança Digital</title>
+    <style>
+        /* Configurações Gerais de Acessibilidade */
+        :root {
+            --cor-fundo: #FFFFFF;
+            --cor-texto: #1A1A1A;
+            --cor-primaria: #0056B3;
+            --cor-destaque: #FFF3CD;
+            --cor-borda: #D3D3D3;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            /* Tamanho de fonte maior para facilitar a leitura */
+            font-size: 22px; 
+        }
+
+        /* Barra de Topo */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .introducao {
+            text-align: center;
+            background-color: var(--cor-destaque);
+            padding: 15px;
+            border: 2px solid #FFEBAA;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        /* Cartões de Dicas (Fáceis de ler e espaçados) */
+        .dica-card {
+            background-color: #F8F9FA;
+            border: 3px solid var(--cor-borda);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .dica-card h2 {
+            color: var(--cor-primaria);
+            margin-top: 0;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Botões Grandes e Espaçados */
+        .botao-ajuda {
+            display: block;
+            width: 100%;
+            background-color: #28A745;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .botao-ajuda:hover, .botao-ajuda:focus {
+            background-color: #218838;
+            outline: 4px solid #000000;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 2px solid var(--cor-borda);
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Guia de Segurança Digital</h1>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <p><strong>Bem-vindo!</strong> Aqui você aprenderá a navegar na internet de forma segura e protegida.</p>
+        </section>
+
+        <article class="dica-card">
+            <h2>🔒 1. Senhas Seguras</h2>
+            <p>Não use datas de nascimento ou nomes de parentes em suas senhas. Misture letras maiúsculas, minúsculas, números e símbolos (como @, #, $). Nunca anote suas senhas no celular.</p>
+        </article>
+
+        <article class="dica-card">
+            <h2>⚠️ 2. Desconfie de Mensagens Urgentes</h2>
+            <p>Se receber uma mensagem dizendo que sua conta do banco vai ser fechada ou que você ganhou um prêmio inesperado, <strong>pare e desconfie</strong>. Bancos não pedem senhas por mensagem.</p>
+        </article>
+
+        <article class="dica-card">
+            <h2>🔗 3. Cuidado com Links</h2>
+            <p>Não clique em links enviados por pessoas desconhecidas no WhatsApp ou no e-mail. Eles podem direcionar para páginas falsas que tentam roubar seus dados.</p>
+        </article>
+
+        <article class="dica-card">
+            <h2>📞 4. Na dúvida, ligue para alguém</h2>
+            <p>Se receber uma ligação ou mensagem suspeita de alguém dizendo ser seu parente pedindo dinheiro, não envie imediatamente. Desligue e ligue de volta para o número antigo do seu parente para confirmar.</p>
+        </article>
+
+        <a href="tel:190" class="botao-ajuda">
+            🚨 Precisa de Ajuda Urgente? Ligue 190
+        </a>
+    </main>
+
+    <footer>
+        <p>Este aplicativo foi feito para ajudar você a navegar com tranquilidade.</p>
+    </footer>
+
+</body>
+</html>
