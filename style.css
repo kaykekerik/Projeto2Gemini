@@ -1,7 +1,109 @@
+/* Configurações Gerais de Acessibilidade */
 :root {
     --cor-fundo: #FFFFFF;
     --cor-texto: #1A1A1A;
     --cor-primaria: #0056B3;
     --cor-destaque: #FFF3CD;
     --cor-borda: #D3D3D3;
+    --cor-alerta: #DC3545;
+    --cor-sucesso: #28A745;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 22px; 
+}
+
+/* Barra de Topo */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Seção 1: Banner Inicial */
+.banner-inicial {
+    background-color: #E6F0FA;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.banner-inicial h2 {
+    color: var(--cor-primaria);
+    margin-top: 0;
+    font-size: 30px;
+}
+
+/* Botão de Ajuda em Destaque no Banner */
+.botao-ajuda-destaque {
+    display: inline-block;
+    background-color: var(--cor-alerta);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.botao-ajuda-destaque:hover, .botao-ajuda-destaque:focus {
+    background-color: #BD2130;
+    outline: 4px solid #000000;
+}
+
+/* Títulos das Seções */
+.titulo-secao {
+    color: var(--cor-primaria);
+    border-bottom: 4px solid var(--cor-primaria);
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* Cartões de Conteúdo */
+.dica-card {
+    background-color: #F8F9FA;
+    border: 3px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.dica-card h3 {
+    color: var(--cor-primaria);
+    margin-top: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Lista de Direitos e Golpes */
+.lista-guia {
+    margin: 0;
+    padding-left: 25px;
 }

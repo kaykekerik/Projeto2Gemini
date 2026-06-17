@@ -12,6 +12,8 @@
             --cor-primaria: #0056B3;
             --cor-destaque: #FFF3CD;
             --cor-borda: #D3D3D3;
+            --cor-alerta: #DC3545;
+            --cor-sucesso: #28A745;
         }
 
         body {
@@ -21,7 +23,6 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            /* Tamanho de fonte maior para facilitar a leitura */
             font-size: 22px; 
         }
 
@@ -45,16 +46,52 @@
             padding: 20px;
         }
 
-        .introducao {
+        /* Seção 1: Banner Inicial */
+        .banner-inicial {
+            background-color: #E6F0FA;
+            border: 3px solid var(--cor-primaria);
+            border-radius: 12px;
+            padding: 30px;
             text-align: center;
-            background-color: var(--cor-destaque);
-            padding: 15px;
-            border: 2px solid #FFEBAA;
-            border-radius: 8px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        /* Cartões de Dicas (Fáceis de ler e espaçados) */
+        .banner-inicial h2 {
+            color: var(--cor-primaria);
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        /* Botão de Ajuda em Destaque no Banner */
+        .botao-ajuda-destaque {
+            display: inline-block;
+            background-color: var(--cor-alerta);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .botao-ajuda-destaque:hover, .botao-ajuda-destaque:focus {
+            background-color: #BD2130;
+            outline: 4px solid #000000;
+        }
+
+        /* Títulos das Seções */
+        .titulo-secao {
+            color: var(--cor-primaria);
+            border-bottom: 4px solid var(--cor-primaria);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        /* Cartões de Conteúdo */
         .dica-card {
             background-color: #F8F9FA;
             border: 3px solid var(--cor-borda);
@@ -63,41 +100,30 @@
             margin-bottom: 25px;
         }
 
-        .dica-card h2 {
+        .dica-card h3 {
             color: var(--cor-primaria);
             margin-top: 0;
-            font-size: 26px;
+            font-size: 24px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        /* Botões Grandes e Espaçados */
-        .botao-ajuda {
-            display: block;
-            width: 100%;
-            background-color: #28A745;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 12px;
-            margin-top: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* Lista de Direitos e Golpes */
+        .lista-guia {
+            margin: 0;
+            padding-left: 25px;
         }
 
-        .botao-ajuda:hover, .botao-ajuda:focus {
-            background-color: #218838;
-            outline: 4px solid #000000;
+        .lista-guia li {
+            margin-bottom: 15px;
         }
 
         /* Rodapé */
         footer {
             text-align: center;
             padding: 30px;
-            margin-top: 50px;
+            margin-top: 60px;
             border-top: 2px solid var(--cor-borda);
             font-size: 18px;
         }
@@ -110,37 +136,66 @@
     </header>
 
     <main>
-        <section class="introducao">
-            <p><strong>Bem-vindo!</strong> Aqui você aprenderá a navegar na internet de forma segura e protegida.</p>
+        
+        <section class="banner-inicial">
+            <h2>Navegue com Proteção e Confiança</h2>
+            <p>A internet é um espaço incrível, mas exige cuidados. Aprenda a proteger seus dados, conhecer seus direitos e evitar armadilhas virtuais.</p>
+            <a href="tel:190" class="botao-ajuda-destaque">
+                <span aria-hidden="true">🚨</span> Precisa de Ajuda? Ligue 190
+            </a>
         </section>
 
-        <article class="dica-card">
-            <h2>🔒 1. Senhas Seguras</h2>
-            <p>Não use datas de nascimento ou nomes de parentes em suas senhas. Misture letras maiúsculas, minúsculas, números e símbolos (como @, #, $). Nunca anote suas senhas no celular.</p>
-        </article>
+        <section id="dicas">
+            <h2 class="titulo-secao">Dicas Importantes de Segurança</h2>
+            
+            <article class="dica-card">
+                <h3><span aria-hidden="true">🔒</span> 1. Senhas Fortes</h3>
+                <p>Misture letras maiúsculas, minúsculas, números e símbolos (como @, #, $). Evite usar datas de nascimento, nomes ou sequências óbvias como "123456".</p>
+            </article>
 
-        <article class="dica-card">
-            <h2>⚠️ 2. Desconfie de Mensagens Urgentes</h2>
-            <p>Se receber uma mensagem dizendo que sua conta do banco vai ser fechada ou que você ganhou um prêmio inesperado, <strong>pare e desconfie</strong>. Bancos não pedem senhas por mensagem.</p>
-        </article>
+            <article class="dica-card">
+                <h3><span aria-hidden="true">🔗</span> 2. Cuidado com Links</h3>
+                <p>Não clique em links enviados por desconhecidos ou que pareçam suspeitos, mesmo que venham de contatos conhecidos no WhatsApp ou e-mail. Eles podem instalar vírus no seu aparelho.</p>
+            </article>
 
-        <article class="dica-card">
-            <h2>🔗 3. Cuidado com Links</h2>
-            <p>Não clique em links enviados por pessoas desconhecidas no WhatsApp ou no e-mail. Eles podem direcionar para páginas falsas que tentam roubar seus dados.</p>
-        </article>
+            <article class="dica-card">
+                <h3><span aria-hidden="true">🔄</span> 3. Atualize seu Aparelho</h3>
+                <p>Mantenha o sistema operacional do seu celular ou computador e os aplicativos sempre atualizados. As atualizações corrigem falhas que os criminosos usam para invadir dispositivos.</p>
+            </article>
+        </section>
 
-        <article class="dica-card">
-            <h2>📞 4. Na dúvida, ligue para alguém</h2>
-            <p>Se receber uma ligação ou mensagem suspeita de alguém dizendo ser seu parente pedindo dinheiro, não envie imediatamente. Desligue e ligue de volta para o número antigo do seu parente para confirmar.</p>
-        </article>
+        <section id="direitos">
+            <h2 class="titulo-secao">Seus Direitos na Internet</h2>
+            <article class="dica-card">
+                <h3><span aria-hidden="true">⚖️</span> Garantias Legalmente Asseguradas</h3>
+                <p>Você não está desprotegido na rede. A legislação garante direitos fundamentais para todos os usuários:</p>
+                <ul class="lista-guia">
+                    <li><strong>Privacidade e Proteção de Dados:</strong> Seus dados pessoais (como nome, CPF e fotos) não podem ser vendidos ou compartilhados sem a sua autorização expressa.</li>
+                    <li><strong>Combate a Crimes Virtuais:</strong> Injúria, calúnia, ameaças e golpes praticados na internet são crimes e podem ser punidos rigorosamente pela lei.</li>
+                    <li><strong>Liberdade com Responsabilidade:</strong> Você tem o direito de se manifestar, mas o anonimato total para cometer crimes é proibido e ofensas geram punições.</li>
+                </ul>
+            </article>
+        </section>
 
-        <a href="tel:190" class="botao-ajuda">
-            🚨 Precisa de Ajuda Urgente? Ligue 190
-        </a>
+        <section id="golpes">
+            <h2 class="titulo-secao">Como Identificar Golpes</h2>
+            
+            <article class="dica-card">
+                <h3><span aria-hidden="true">⚠️</span> Fique Atento aos Sinais de Alerta</h3>
+                <p>Os criminosos costumam usar as mesmas táticas para enganar as pessoas. Desconfie imediatamente se encontrar uma destas situações:</p>
+                <ul class="lista-guia">
+                    <li><strong>Urgência Excessiva:</strong> Mensagens dizendo que sua conta bancária será bloqueada imediatamente ou que há um problema urgente com seus documentos.</li>
+                    <li><strong>Preços ou Prêmios Irreais:</strong> Ofertas de produtos por valores excessivamente baixos ou mensagens dizendo que você ganhou um sorteio do qual nunca participou.</li>
+                    <li><strong>Pedidos de Dinheiro por Parentes:</strong> Se um amigo ou familiar mandar mensagem de um número novo pedindo dinheiro emprestado, ligue para o número antigo dele para confirmar a identidade antes de fazer qualquer transferência.</li>
+                    <li><strong>Pedidos de Dados Sensíveis:</strong> Bancos e empresas sérias nunca solicitam senhas, códigos de confirmação por SMS ou fotos do seu cartão por mensagens de texto ou redes sociais.</li>
+                </ul>
+            </article>
+        </section>
+
     </main>
 
     <footer>
-        <p>Este aplicativo foi feito para ajudar você a navegar com tranquilidade.</p>
+        <p>Este guia foi feito para ajudar você a navegar com tranquilidade e segurança.</p>
     </footer>
 
 </body>
